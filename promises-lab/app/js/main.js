@@ -53,10 +53,11 @@ const app = (() => {
 
     // use the promise
     return getImageName(country)
-  .then(fetchFlag)
+    .then(logSuccess)
+ .then(fetchFlag)
   .then(processFlag)
   .then(appendFlag)
-  .catch(logError); 
+ .catch(logError); 
   }
 
   function allFlags(promiseList) {
