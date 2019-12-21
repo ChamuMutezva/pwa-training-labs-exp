@@ -29,19 +29,19 @@ const app = (() => {
       }, 1000);
     });
     console.log(promiseOfImageName);
-    return promiseOfImageName;    
+    return promiseOfImageName;
   }
 
   function isSpain(country) {
     country = country.toLowerCase();
     const spainSelect = new Promise((resolve, reject) => {
-     setTimeout(() => {
-      if (country === 'spain') {
-        resolve("Country is Spain");
-      } else {
-        reject("input error")
-      }
-     }, 1000);
+      setTimeout(() => {
+        if (country === 'spain') {
+          resolve("Country is Spain");
+        } else {
+          reject("input error")
+        }
+      }, 1000);
     })
     console.log(spainSelect);
     return spainSelect;
@@ -53,16 +53,16 @@ const app = (() => {
 
     // use the promise
     return getImageName(country)
-    .then(logSuccess)
- .then(fetchFlag)
-  .then(processFlag)
-  .then(appendFlag)
- .catch(logError); 
+      .then(logSuccess)
+      .then(fetchFlag)
+      .then(processFlag)
+      .then(appendFlag)
+      .catch(logError);
   }
 
   function allFlags(promiseList) {
-  return Promise.all(promiseList)
-  .catch(returnFalse);
+    return Promise.all(promiseList)
+      .catch(returnFalse);
     // use promise.all
   }
 
@@ -71,8 +71,8 @@ const app = (() => {
     getImageName('Chile'),
     getImageName('Peru')
   ];
-  
-  allFlags(promises).then(function(result) {
+
+  allFlags(promises).then(function (result) {
     console.log(result);
   });
   // call the allFlags function
@@ -82,14 +82,14 @@ const app = (() => {
   const promise1 = new Promise((resolve, reject) => {
     setTimeout(resolve, 500, 'one');
   });
-  
+
   const promise2 = new Promise((resolve, reject) => {
     setTimeout(resolve, 100, 'two');
   });
-  
+
   Promise.race([promise1, promise2])
-  .then(logSuccess)
-  .catch(logError);
+    .then(logSuccess)
+    .catch(logError);
 
   /* Helper functions */
 
