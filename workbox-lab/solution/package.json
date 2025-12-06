@@ -11,9 +11,9 @@
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.29.3",
     "del": "^3.0.0",
-    "gulp": "^4.0.2",
+    "gulp": "^5.0.1",
     "workbox-build": "^3.6.3"
   }
 }
